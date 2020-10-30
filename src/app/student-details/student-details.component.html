@@ -1,0 +1,40 @@
+<button class="signed-up" (click)="onlySignedUp($event)">Students Signed-up</button>
+<button class="show-all" (click)="showAll()">Show All</button>
+
+<h3 class="title">{{ title }}</h3>
+
+<div class="wrapper">
+  <div class="first-tr">Students with more than 3 courses:</div>
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Number of Courses</th>
+      <th>Courses</th>
+    </tr>
+    <tr *ngFor="let data of studentDetails">
+      <ng-container *ngIf="data.numberOfCourses > 3">
+        <td>{{data.fullName}}</td>
+        <td>{{data.numberOfCourses}}</td>
+        <td>{{data.courses}}</td>
+      </ng-container>
+    </tr>
+  </table>
+
+  <div class="first-tr">Students with 3 or less courses:</div>
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Number of Courses</th>
+      <th>Courses</th>
+    </tr>
+    <tr *ngFor="let data of studentDetails" [ngClass]="{'no-course':data.numberOfCourses === '0' }">
+      <ng-container *ngIf="data.numberOfCourses <= 3" >
+        <ng-container>
+          <td>{{data.fullName}}</td>
+          <td>{{data.numberOfCourses}}</td>
+          <td>{{data.courses}}</td>
+        </ng-container>
+    </ng-container>
+    </tr>
+  </table>
+</div>

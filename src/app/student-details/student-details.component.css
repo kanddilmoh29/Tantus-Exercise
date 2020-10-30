@@ -1,0 +1,40 @@
+button {
+  margin-left: 20px;
+  margin-top: 60px;
+}
+
+.title {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.first-tr {
+  border: 1px solid #dddddd;
+  margin: auto;
+  width: 100%;
+  padding: 10px 0 10px 5px;
+  background-color: rgb(179, 218, 179);
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.no-course {
+  color: red;
+}
